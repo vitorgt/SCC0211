@@ -25,9 +25,9 @@ int main(int argc, const char **argv) {
                 }
             }
             if (marshaling.empty())
-                cout << "YES" << endl;
+                cout << "Yes" << endl;
             else
-                cout << "NO" << endl;
+                cout << "No" << endl;
         }
         cout << endl;
     }
