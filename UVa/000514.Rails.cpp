@@ -4,8 +4,7 @@ using namespace std;
 const int INF = 0x3f3f3f3f;
 
 int main(int argc, const char **argv) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
     int n = 0, c = 1;
     while (cin >> n && n != 0) {
@@ -24,12 +23,10 @@ int main(int argc, const char **argv) {
                     marshaling.pop();
                 }
             }
-            if (marshaling.empty())
-                cout << "Yes" << endl;
-            else
-                cout << "No" << endl;
+            if (marshaling.empty()) cout << "Yes\n";
+            else cout << "No\n";
         }
-        cout << endl;
+        cout << "\n";
     }
     return 0;
 }

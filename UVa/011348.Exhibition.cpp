@@ -4,8 +4,7 @@ using namespace std;
 const int INF = 0x3f3f3f3f;
 
 int main(int argc, const char **argv) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
     cout << fixed << setprecision(6);
 
     int k = 0, n = 0, m = 0, s = 0;
@@ -19,14 +18,15 @@ int main(int argc, const char **argv) {
         N = n;
         unordered_map<int, int> sm;
         unordered_set<int> uniques;
-        vector<unordered_set<int>> ms = vector<unordered_set<int>>(n);
+        vector<unordered_set<int>> ms(n);
         while (n--) {
             cin >> m;
             while (m--) {
                 cin >> s;
                 ms[n].insert(s);
             }
-            for (auto it = ms[n].begin(); it != ms[n].end(); it = next(it)) {
+            for (auto it = ms[n].begin(); it != ms[n].end();
+                 it = next(it)) {
                 sm[*it]++;
             }
         }
@@ -37,12 +37,13 @@ int main(int argc, const char **argv) {
         }
         for (int i = N - 1; i >= 0; i--) {
             sum = 0;
-            for (auto it = uniques.begin(); it != uniques.end(); it = next(it)) {
+            for (auto it = uniques.begin(); it != uniques.end();
+                 it = next(it)) {
                 sum += ms[i].count(*it);
             }
             cout << " " << (sum / uniques.size()) * 100 << "%";
         }
-        cout << endl;
+        cout << "\n";
     }
     return 0;
 }

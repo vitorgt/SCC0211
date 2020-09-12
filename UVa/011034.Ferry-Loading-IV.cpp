@@ -4,8 +4,7 @@ using namespace std;
 const int INF = 0x3f3f3f3f;
 
 int main(int argc, const char **argv) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
     int c = 0, L = 0, m = 0, car = 0, i = 0;
     string buf = "";
@@ -16,8 +15,7 @@ int main(int argc, const char **argv) {
         queue<int> l, r;
         while (m--) {
             cin >> car >> buf;
-            if (buf[0] == 'l')
-                l.push(car);
+            if (buf[0] == 'l') l.push(car);
             else
                 r.push(car);
         }
@@ -35,7 +33,7 @@ int main(int argc, const char **argv) {
                 }
             }
         }
-        cout << i << endl;
+        cout << i << "\n";
     }
     return 0;
 }

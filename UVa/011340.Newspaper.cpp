@@ -4,8 +4,7 @@ using namespace std;
 const int INF = 0x3f3f3f3f;
 
 int main(int argc, const char **argv) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    std::ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
     cout << fixed << setprecision(2);
 
     int n = 0, k = 0, m = 0, val = 0;
